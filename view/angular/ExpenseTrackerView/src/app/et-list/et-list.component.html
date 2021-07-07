@@ -1,0 +1,22 @@
+<h2 style="text-align: center;">All Expenses</h2>
+<table>
+    <caption style="font-weight: bold;font-size: large;">Expenses</caption>
+    <thead>
+        <th>Description</th>
+        <th>Cost</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let expense of expenses;">
+            <td>{{expense.description}}</td>
+            <td>{{expense.cost}}</td>
+            <td>{{expense.date}}</td>
+            <td>{{expense.type}}</td>
+            <td><a href="#">Delete</a></td>
+            <td><a href="#">Update</a></td>
+        </tr>
+    </tbody>
+</table>
