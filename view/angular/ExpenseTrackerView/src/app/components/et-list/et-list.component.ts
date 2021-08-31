@@ -9,9 +9,12 @@ import { HttpClient } from '@angular/common/http';
 export class EtListComponent implements OnInit {
 
   expenses: any;
+  logined : boolean;
+
 
   constructor(private httpClient: HttpClient) {
     this.expenses = [];
+    this.logined = false;
   }
 
   ngOnInit(): void {

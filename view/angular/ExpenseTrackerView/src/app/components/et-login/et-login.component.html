@@ -1,0 +1,12 @@
+<!-- <form action="/handleLogin" method="post" enctype="text/plain" name="login"> -->
+    <div>
+      <label> Username </label>
+      <input type="text" name="username" [(ngModel)]="username">
+      <label> Password </label>
+      <input type="password" name="password" [(ngModel)]="password">
+    </div>
+    <div>
+      <!-- <input type="submit" value="Login"> -->
+      <button (click) = "handleLogin($event)"> Login </button>
+    </div>
+  <!-- </form> -->
