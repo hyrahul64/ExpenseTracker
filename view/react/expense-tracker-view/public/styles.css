@@ -1,0 +1,122 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+.expense-list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  height: 450px;
+  overflow-y: scroll; }
+  .expense-list-item {
+    border-bottom: 2px inset orange; }
+    .expense-list-item:hover {
+      background-color: #ffedcc; }
+    .expense-list-item-col {
+      /* margin-right: 10px;
+      margin-left: 10px;
+      margin-bottom: 5px;
+      margin-top: 3px; */
+      color: orange;
+      display: inline-block;
+      font-size: larger; }
+
+.upload,
+.login {
+  text-align: center;
+  margin-top: 10%;
+  height: 100%; }
+  .upload-input,
+  .login-input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-height: 20px; }
+
+.header {
+  display: block;
+  height: 60 px;
+  border-bottom: 3px double orange;
+  /*  [class^="header"] {
+  } */ }
+  .header-item {
+    font-weight: bold;
+    font-size: large;
+    display: inline-block;
+    /* margin-right: 5px; */ }
+    .header-item-text {
+      color: orange;
+      padding-right: 5px; }
+    .header-item-icon {
+      margin: 1px 2px;
+      font-size: 50%;
+      vertical-align: middle;
+      color: orange; }
+      .header-item-icon:hover {
+        background-color: #ffedcc; }
+
+.detail {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(34, 34, 34, 0.9); }
+  .detail-front {
+    background-color: white;
+    width: 40%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .detail-front-close {
+      text-align: right; }
+  .detail-form {
+    margin: 20% 5%; }
+  .detail-form-item {
+    font-size: large;
+    margin: 10px 0px;
+    height: 50px;
+    padding: 5px; }
+    .detail-form-item input,
+    .detail-form-item select {
+      margin-left: 5%;
+      border-bottom: #336393 1px solid; }
+      .detail-form-item input:focus,
+      .detail-form-item select:focus {
+        outline: none; }
+
+header ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #336393; }
+  header ul li {
+    float: right; }
+    header ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none; }
+      header ul li a:hover {
+        background-color: #5089c2; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #336393; }
+  footer p {
+    color: white; }
+
+h1 {
+  margin: 20px;
+  color: #336393;
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); */ }
+
+h2 {
+  text-align: center;
+  margin: 50 px;
+  color: #336393; }

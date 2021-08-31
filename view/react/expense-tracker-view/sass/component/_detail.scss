@@ -1,0 +1,39 @@
+.detail {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color-dark-grey, 0.9);
+
+  &-front {
+    background-color: $color-white;
+    width: 40%;
+    height: 80%;
+    @include center_abs;
+
+    &-close {
+      text-align: right;
+    }
+  }
+
+  &-form {
+    margin: 20% 5%;
+  }
+
+  &-form-item {
+    font-size: large;
+    margin: 10px 0px;
+    height: 50px;
+    padding: 5px;
+
+    & input,
+    select {
+      &:focus {
+        outline: none;
+      }
+      margin-left: 5%;
+      border-bottom: $color-primary 1px solid;
+    }
+  }
+}

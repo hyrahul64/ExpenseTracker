@@ -1,0 +1,12 @@
+.upload,
+.login {
+  text-align: center;
+  margin-top: 10%;
+  height: 100%;
+
+  &-input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-height: 20px;
+  }
+}

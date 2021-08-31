@@ -1,0 +1,37 @@
+@import "../abstract/variables";
+
+.header {
+  display: block;
+  height: 60 px;
+  border-bottom: 3px double $color-front;
+
+  /*  [class^="header"] {
+  } */
+
+  &-item {
+    font-weight: bold;
+    font-size: large;
+    display: inline-block;
+    /* margin-right: 5px; */
+
+    &-text {
+      color: $color-front;
+      padding-right: 5px;
+    }
+    &-icon {
+      margin: 1px 2px;
+      font-size: 50%;
+      vertical-align: middle;
+      color: $color-front;
+
+      &:hover {
+        background-color: lighten($color-front, 40%);
+      }
+    }
+
+    &-edit {
+      input {
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.expense-list {
+  margin-left: auto;
+  margin-right: auto;
+  width: $list-width;
+  height: $list-height;
+  overflow-y: scroll;
+
+  &-item {
+    border-bottom: 2px inset $color-front;
+
+    &:hover {
+      background-color: lighten($color-front, 40%);
+    }
+
+    &-col {
+      /* margin-right: 10px;
+      margin-left: 10px;
+      margin-bottom: 5px;
+      margin-top: 3px; */
+      color: $color-front;
+      display: inline-block;
+      font-size: larger;
+    }
+  }
+}

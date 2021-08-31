@@ -1,0 +1,22 @@
+@import "./abstract/variables";
+@import "./abstract/mixin";
+@import "./base/base";
+@import "./component/list";
+@import "./component/login";
+@import "./component/ListHeader.scss";
+@import "./component/detail";
+@import "./layout/header";
+@import "./layout/body";
+@import "./layout/footer";
+
+h1 {
+  margin: 20px;
+  color: $color-primary;
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); */
+}
+
+h2 {
+  text-align: center;
+  margin: 50 px;
+  color: $color-primary;
+}
