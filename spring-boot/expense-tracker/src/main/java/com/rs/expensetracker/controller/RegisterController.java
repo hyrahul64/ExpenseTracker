@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,6 +22,9 @@ public class RegisterController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @PostMapping(value = "/register", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> register(@RequestBody User user) {
         System.out.println("POST:register-->" + user.toString());
@@ -31,6 +35,8 @@ public class RegisterController {
         if(userDetails!= null && userDetails.getUsername().equals(user.getUsername())) {
             throw new UserRegistrationException(USER_EXIST, "User already exist!");
         }
+        String encodedPassword = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encodedPassword);
         User savedUser = userService.saveUser(user);
         return new ResponseEntity<User>(savedUser, HttpStatus.CREATED);
     }

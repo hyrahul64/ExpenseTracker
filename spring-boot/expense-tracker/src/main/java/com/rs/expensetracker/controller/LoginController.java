@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,6 +22,7 @@ import static com.rs.expensetracker.enums.LoginError.INVALID_PASSWORD;
 import static com.rs.expensetracker.enums.LoginError.INVALID_USER;
 
 @Controller
+@CrossOrigin
 public class LoginController {
 
     @Autowired
