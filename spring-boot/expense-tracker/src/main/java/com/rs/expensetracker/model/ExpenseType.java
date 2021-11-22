@@ -1,5 +1,7 @@
 package com.rs.expensetracker.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,6 +11,7 @@ public class ExpenseType {
     @GeneratedValue
     private Integer id;
 
+    @JsonIgnore
     @ManyToOne(optional = false)
     @JoinColumn(name =  "expense_id")
     private Expense expense;

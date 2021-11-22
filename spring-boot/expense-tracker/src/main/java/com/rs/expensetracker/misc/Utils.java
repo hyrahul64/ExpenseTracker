@@ -1,4 +1,4 @@
-package com.rs.expensetracker.utils;
+package com.rs.expensetracker.misc;
 
 import com.rs.expensetracker.model.ExpenseType;
 

@@ -1,6 +1,10 @@
 package com.rs.expensetracker.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity(name = "expenses")
 public class Expense {
@@ -20,6 +24,10 @@ public class Expense {
 
     @Column(name = "type")
     private String type;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "expense")
+    private Set<ExpenseType> expenseTypes = new HashSet<>();
 
     public Integer getId() {
         return id;
@@ -70,6 +78,13 @@ public class Expense {
         this.type = type;
     }
 
+    public void addExpenseType(ExpenseType expenseType) {
+        expenseTypes.add(expenseType);
+    }
+
+    public Set<ExpenseType> getExpenseTypes() {
+        return expenseTypes;
+    }
     @Override
     public String toString() {
         return "Expense{" +

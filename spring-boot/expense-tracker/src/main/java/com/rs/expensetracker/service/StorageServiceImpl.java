@@ -5,7 +5,6 @@ import com.rs.expensetracker.model.Expense;
 import com.rs.expensetracker.model.ExpenseType;
 import com.rs.expensetracker.repo.ExpenseRepository;
 import com.rs.expensetracker.repo.ExpenseTypeRepository;
-import com.rs.expensetracker.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
