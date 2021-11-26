@@ -23,8 +23,8 @@ public class User implements UserDetails {
     private String confirmPassword;
     private boolean enabled;
 
-    //@Enumerated(EnumType.STRING)
-    private String userAuthority;
+    @Enumerated(EnumType.STRING)
+    private UserAuthority userAuthority;
 
     //NOTE: Following not working without @OneToMany annotation. Why hibernate doesn't allow uni-direction relation here?
     //As other side is ENUM so?
@@ -51,7 +51,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singleton(UserAuthority.fromValue(userAuthority));
+        return Collections.singleton(userAuthority);
     }
 
     @Override
@@ -100,11 +100,11 @@ public class User implements UserDetails {
         this.confirmPassword = confirmPassword;
     }
 
-    public String getUserAuthority() {
+    public UserAuthority getUserAuthority() {
         return userAuthority;
     }
 
-    public void setUserAuthority(String userAuthority) {
+    public void setUserAuthority(UserAuthority userAuthority) {
         this.userAuthority = userAuthority;
     }
 

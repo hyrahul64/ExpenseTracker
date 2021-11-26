@@ -16,14 +16,14 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        converters.add(new UserAuthorityEnumConverter());
+        //converters.add(new UserAuthorityEnumConverter());
         WebMvcConfigurer.super.configureMessageConverters(converters);
         System.out.println("configureMessageConverters");
     }
 
     @Override
     public void addFormatters(FormatterRegistry registry) {
-        registry.addConverter(new UserAuthorityEnumConverter2());
+        //registry.addConverter(new UserAuthorityEnumConverter2());
         WebMvcConfigurer.super.addFormatters(registry);
     }
 }

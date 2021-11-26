@@ -22,7 +22,7 @@ public enum UserAuthority implements GrantedAuthority {
         this.userAuthority = userAuthority;
     }
 
-    @JsonCreator
+    //@JsonCreator
     public static UserAuthority fromValue(String role) {
         switch (role) {
             case "USER":
